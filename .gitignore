@@ -3,3 +3,4 @@ ls *.pem
 ./cooldown_overrides.txt
 ./vip.txt
 ./t
+./.listacommits.txt
