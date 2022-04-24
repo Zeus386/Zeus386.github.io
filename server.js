@@ -8,7 +8,7 @@ let SECURE = false
 let BOARD, CHANGES
 
 //TODO: compress changes
-const WIDTH = 500, HEIGHT = 500, PALETTE_SIZE = 32, COOLDOWN = 5e3 //5mins
+const WIDTH = 500, HEIGHT = 500, PALETTE_SIZE = 32, COOLDOWN = 0e3 //5mins
 try {
   BOARD = await fs.readFile('./place')
   CHANGES = new Uint8Array(WIDTH * HEIGHT).fill(255)
