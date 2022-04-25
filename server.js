@@ -174,7 +174,7 @@ setInterval(async function() {
     c.send(buf)
   }
   //if(I % 720 == 0){
-  if (I % 300 == 0) {
+  if (I % 250 == 0) {
     try {
       await pushImage()
       console.log("[" + new Date().toISOString() + "] Successfully saved r/place!")
