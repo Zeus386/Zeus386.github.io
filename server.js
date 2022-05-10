@@ -23,7 +23,10 @@ function runLengthChanges() {
   //compress CHANGES with run-length encoding
   let i = 0
   let bufs = [Buffer.alloc(256)], blast = 0, bi = 0
-  bufs[0][bi++] = 2
+	bufs[0][bi++] = 2
+	bufs[0].writeUint32BE(WIDTH, 1)
+	bufs[0].writeUint32BE(HEIGHT, 5)
+	bi += 8
   let add = a => { bufs[blast][bi++] = a; bi == 256 && (bi = 0, bufs.push(Buffer.alloc(256)), blast++) }
   while (true) {
     let c = 0
